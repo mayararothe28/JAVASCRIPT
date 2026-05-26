@@ -1,19 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <script>
-        let age = 15;
+  </head>
+  <script>
+    let age = 15;
 
-        if(age > 18){
-            throw new Error("you are not allowed");
-        }
-        console.log("access granted");
-    </script>
-    
-</body>
+    if (age > 18) {
+      throw new Error("you are not allowed");
+    }
+    console.log("access granted");
+
+    try {
+      a = prompt("enter a number to divide:");
+      b = prompt("enter a number to dived by:");
+
+      if (b==0){
+        throw "division not allowed"
+      }
+      c = a / b;
+      console.log("Result" + rer); //result to result answer show infinity and result see  in c resut show in divides
+    } catch (err) {
+      console.log("Error:" + err);
+    }
+    finally{
+        console.log("programme ended")   //error show not show but this line show of programe 
+    }
+  </script>
+  <body></body>
 </html>
