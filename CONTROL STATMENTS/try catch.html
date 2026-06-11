@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        try{
+            a=prompt("enter a number to divided");
+            b=prompt("enter a number to divided by:");
+            if(b==0){
+                throw "division not allowed"
+            }
+            c=a/b;
+            console.log("result"+ result);
+
+        }
+
+        catch(err){
+            console.log("error" + err.message);
+        }
+        finally{
+            console.log("programe ended")
+        }
+    </script>
+    
+</body>
+</html>
