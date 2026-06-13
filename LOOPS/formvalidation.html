@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function formvalidation(){
+        var x=document.forms["my form"]["fname"].value;
+        if(x==null || x=="")
+    {
+        alert("first name must be fillled out");
+        return false;
+    }
+
+
+    }
+
+</script>
+<body>
+    <form  onclick="formvalidation()">
+        first name:<input type="text" value="fname"><br>
+        <input type="submit" value="submit">
+    </form>
+    
+</body>
+</html>
