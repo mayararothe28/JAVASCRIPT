@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          dob=new Date("august 28, 2006");
+          age=Date.now()- dob.getTime();
+          document.writeln("<br> your age in millisec is:" + age);
+
+          ageDate=new Date(age);
+          document.writeln("<br> your age is:" + Math.abs(ageDate.getUTCFullYear()-2009)+"year")
+         
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    
+    <script>
+        function myFunction()
+        {
+
+           var str=document.getElementById("p1").innerHTML;
+        var n=str.indexOf("locate");
+        document.getElementById("p2").innerHTML=n+1;
+
+        var n2=str.lastIndexOf("locate");
+        document.getElementById("p3").innerHTML=n2+1;
+        }
+
+
+
+    </script>
+    <p id="p1">plz loacte your locate occurs</p>
+
+     <p>click the button to locate where locate first occurs</p>
+    <p id="p2">o</p>
+    <p id="p3">o</p>
+    <button onclick="myFunction()">tryit</button> 
+</body>
+</html>
