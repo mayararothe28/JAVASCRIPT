@@ -1,18 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>register</h1>
-    <form>
-        firstname:<input type="text" name="firstname">
-        lastname:<input type="text" name="lastname">
-        age:<input type="text" name="age">
-        contact:<input type="text" name="contact" pattern="[8>
-        
+  </head>
+  <script>
+    function storedata() {
+      var person = {
+        firstname: "",
+        lastname: "",
+        age: "",
+        contact: "",
+
+        changedcase: function () {
+          this.firstname = this.firstname.toUpperCase();
+          this.lastname = this.lastname.toUpperCase();
+        },
+      };
+
+      person.firstname = document.forms["regform"]["firstname"].value;
+
+      person.lastname = document.forms["regform"]["lastname"].value;
+
+      person.age = document.forms["regform"]["age"].value;
+
+      person.contact = document.forms["regform"]["contact"].value;
+      console.log(person);
+      person.changedcase();
+      console.log("after changing case:");
+      console.log(person);
+
+      alert("data store succesfully");
+
+      var text = "";
+
+      for (const key in person) {
+        if (typeof person[key] !== "function") {
+          text += key + ":" + person[key] + "<br>";
+        }
+      }
+      document.getElementById("details").innerHTML = text;
+    }
+  </script>
+  <body>
+    <h1 align="center">Register</h1>
+    <hr />
+
+    <form
+      name="regform"
+      onsubmit="
+        storedata();
+        return false;
+      "
+    >
+      firstname:<input type="text" name="firstname" /><br /><br />
+      lastname:<input type="text" name="lastname" /><br /><br />
+      age:<input type="text" name="age" /><br /><br />
+      contact:<input
+        type="number"
+        name="contact"
+        pattern="[0-9]{10}"
+      /><br /><br />
+      <input type="submit" value="submit" />
     </form>
-</body>
+    <hr />
+    <div>
+      <h3>details submitted</h3>
+      <p id="details"></p>
+    </div>
+  </body>
 </html>
