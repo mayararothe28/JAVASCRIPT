@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form id="form1" onsubmit="myfunction(); return false" >
+    firstname:<input type="text" name ="fname" value="tikku"/><br><br>
+    lastname:<input type="text" name="lname" value="chinu"/><br><br>
+    <input type="submit" value="submit">
+  </form>  
+
+  
+  <p id="demo"></p>
+
+
+
+  <script>
+    function myfunction(){
+        var x=document.getElementById("form1");
+        var text="";
+
+        for(var i = 0; i < x.length -1; i++){
+
+            text=text + x.elements[i].value + "</br>";
+
+        }
+        document.getElementById("demo").innerHTML=text
+    };
+  </script>
+</body>
+</html>
