@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    courses:<input type="text" id="course">
+    <button onclick="AddCourse();">Add</button>
+    <br>
+    SelectedCourse: <div id="result" style="border: 1px solid black; padding: 10px;"></div>
+
+  
+    <script>
+
+          //add a data  last in one
+          //and this method are use in add to card
+
+          var SelectedCourse=[]
+          function AddCourse(){
+            var select=document.getElementById("course")
+            console.log(SelectedCourse);
+            SelectedCourse.push(select.value);
+
+            document.getElementById("result").innerHTML=SelectedCourse.toString();
+
+          }
+
+       /* var arr=["s","a","a","p"];
+        arr.push("b");
+        console.log(arr);*/
+
+    </script>
+    
+</body>
+</html>

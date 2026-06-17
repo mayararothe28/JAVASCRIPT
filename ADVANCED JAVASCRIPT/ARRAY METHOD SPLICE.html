@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    adding and removing  data<br>
+
+  Courses:<input type="text" id="Course"/>
+    <button onclick="AddCourse()">Add</button>
+    <button onclick="RemoveCourse()">Remove</button>
+    <br>
+
+    Selected Courses: <div id="result"  style="border : 1px solid black; padding: 10px;"></div>
+
+    <script>
+       var SelectedCourse=[];
+        function AddCourse(){
+
+            var select=document.getElementById("Course");
+            console.log(SelectedCourse);
+            SelectedCourse.push(select.value);
+            document.getElementById("result").innerHTML=SelectedCourse.toString();
+
+        }
+
+        function RemoveCourse(){
+            var select=document.getElementById("Course");
+            var index=SelectedCourse.indexOf(select.value);
+            if(index >-1){
+                SelectedCourse.splice(index,1);
+            }
+            document.getElementById("result").innerHTML=SelectedCourse.toString();
+
+    
+        }
+        //2 example
+        let arr=["I", "study", "javascript"];
+        arr.splice(1,1);
+        console.log(arr);
+
+        //3 example
+
+        let arr2=["I", "study", "javascript", "right", "now"];
+        arr2.splice(0,3, "let's" , "dance");
+        console.log(arr2)
+
+        //4 example
+
+        let arr3=[1, 2, 5 ];
+        arr3.splice(-1, 0, 3, 4);    //=-1 it is null value and 0 it is  a element
+        console.log(arr3)
+
+        
+
+
+
+        
+
+        
+    </script>
+    
+</body>
+</html>

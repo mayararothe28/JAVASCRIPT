@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+     <div id="user"></div>
+   
+
+    //SLICE MEANS WHAT A NEW ARRAY COPING OT ALL ITEMS FORM INDEX TO END (NOT INCLLUDING END)
+
+    <script>
+        /*let arr=[1,2,3,4,5];
+        arr2=arr.slice(1,3);
+        console.log(arr,arr2);  //INDEX WISE BUT 3IS NOT A SPACE*/
+
+       /* let arr2=[1,2,3,4,5];
+        arr=arr2.slice(-3);   // beacouse -3 it is ending array consider
+        console.log(arr);
+
+        let arr3=["mayara", "vanu", "khushi"];
+        arr3.forEach(e=>{
+            console.log(e);
+        });
+
+
+      let arr=["mayara", "vanu" , "khushi"]
+      if(arr.includes("gandalf")){
+        console.log(arr.indexOf("gandlaf"));
+      }*/
+
+     /* let users=[
+        {id:1, name:"mayara"},
+        {id:2, name:"vanu"},
+        {id:3, name:"khsuhi"},
+
+      ];
+
+      let user=users.find(item=>item.id==2);
+      console.log(user);*/
+
+
+      //IT IS USE TO WEBSITE PRODUCT SEARCH AND SHOW
+
+      let user=[
+        
+      {id:1, name:"mayara"},
+      {id:2, name:"vanu"},
+      {id:3, name:"khushi"}
+      ];
+
+      user.forEach(user=>{document.getElementById("user").innerHTML += 
+       `Id: ${user.id} Name:${user.name+ "<br>"}`}
+    );
+
+   // console.log(user.findIndex(user=> user.name=="khushi"))
+
+   // console.log(user.findIndex(user=>user.name=="mayara"))
+
+    //let someuser=user.filter(item => item. id==3)
+   // console.log(someuser);
+
+    /*let length=["mayara","vanu","khushi"].map
+    (item=>item.length);
+    console.log(length);*/
+
+    var names=["mayara", "vanu", "sanu", "khushi"];
+    console.log(names.sort());
+    
+    </script>
+   
+    
+</body>
+</html>
