@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:90vh;
+    background:#f5f5f5;
+}
+
+.calculator{
+    width:450px;
+    padding:10px;
+    border:3px solid black;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:8px;
+}
+
+#display{
+    grid-column:span 3;
+    height:100px;
+    font-size:40px;
+    border:3px solid black;
+}
+
+.btn{
+    height:100px;
+    font-size:40px;
+    background:green;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+
+        <input type="text" id="display" readonly>
+
+        <button class="btn" onclick="clearDisplay()">C</button>
+
+        <button class="btn" onclick="appendValue('1')">1</button>
+        <button class="btn" onclick="appendValue('2')">2</button>
+        <button class="btn" onclick="appendValue('3')">3</button>
+        <button class="btn" onclick="appendValue('/')">/</button>
+
+        <button class="btn" onclick="appendValue('4')">4</button>
+        <button class="btn" onclick="appendValue('5')">5</button>
+        <button class="btn" onclick="appendValue('6')">6</button>
+        <button class="btn" onclick="appendValue('*')">*</button>
+
+        <button class="btn" onclick="appendValue('7')">7</button>
+        <button class="btn" onclick="appendValue('8')">8</button>
+        <button class="btn" onclick="appendValue('9')">9</button>
+        <button class="btn" onclick="appendValue('-')">-</button>
+
+        <button class="btn" onclick="appendValue('0')">0</button>
+        <button class="btn" onclick="appendValue('.')">.</button>
+        <button class="btn" onclick="calculate()">=</button>
+        <button class="btn" onclick="appendValue('+')">+</button>
+
+    </div>
+
+    <script src="script2.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        
+        margin: 0;
+        background-color: rgb(244, 236, 226);
+      }
+      #mainbox{
+        width: 100%;
+        
+        justify-content: center;
+        margin-top: 5%;
+      }
+
+      #calculator{
+       width: 19%;
+        justify-content: center;
+       
+       padding:20px ;
+       border: 1px solid black;
+       background-color: rgb(153, 185, 189);
+      margin-left: 40%;
+        
+        
+      }
+      h2{
+       text-align: center;
+      }
+      input{
+        width:100%;
+    height:35px;
+    margin-bottom:10px;
+    padding-left:10px;
+     box-sizing:border-box;
+    border:none;
+}
+
+      .row{
+        display: flex;
+        gap: 5%;
+      }
+      select{
+
+         width:180px;
+    height:35px;
+    border:none;
+      }
+      button{
+         width:80px;
+    background:red;
+    color:white;
+    border:none;
+    cursor:pointer;
+      }
+      
+      button:hover{
+        color: darkred;
+      }
+
+     
+     
+    </style>
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <div id="mainbox">
+      <h2>CALCULATOR</h2>
+
+      <div id="calculator">
+        <input type="number" id="num1" placeholder="Enter First Number" />
+        <input type="number" id="num2" placeholder="Enter First Number" />
+        
+        <div class="row">
+        <select id="operator">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+
+        <button onclick="calculate()">COUNT</button>
+
+        
+      </div>
+      <input type="text" id="result" placeholder="Result" readonly />
+    </div>
+
+    
+  </body>
+</html>
