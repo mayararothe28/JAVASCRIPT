@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+    color:#333;
+}
+
+.container{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.box{
+    flex:1;
+    min-width:280px;
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+
+.box h2{
+    margin-bottom:15px;
+    text-align:center;
+}
+
+.box input,
+.box textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.box textarea{
+    height:80px;
+    resize:none;
+}
+
+.box button{
+    width:100%;
+    padding:10px;
+    background:#007bff;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.box button:hover{
+    background:#0056b3;
+}
+
+.heading{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+#productContainer{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:scale(1.03);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:contain;
+    padding:15px;
+    background:white;
+}
+
+.card-body{
+    padding:15px;
+}
+
+.card-body h3{
+    font-size:18px;
+    margin-bottom:10px;
+    height:45px;
+    overflow:hidden;
+}
+
+.price{
+    color:green;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.category{
+    color:#666;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.desc{
+    font-size:14px;
+    color:#555;
+    height:60px;
+    overflow:hidden;
+}
+
+.deleteBtn{
+    width:100%;
+    margin-top:10px;
+    padding:10px;
+    border:none;
+    background:red;
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.deleteBtn:hover{
+    background:darkred;
+}
+
+#findResult{
+    margin-top:15px;
+}
+    </style>    
+
+    
+</head>
+<body>
+
+    <h1>Product Management System</h1>
+
+    <div class="container">
+
+        <!-- Add Product -->
+        <div class="box">
+            <h2>Add Product</h2>
+
+            <input type="text" id="title" placeholder="Enter Product Title">
+
+            <input type="number" id="price" placeholder="Enter Product Price">
+
+            <input type="text" id="category" placeholder="Enter Category">
+
+            <input type="text" id="image" placeholder="Enter Image URL">
+
+            <textarea id="description" placeholder="Enter Description"></textarea>
+
+            <button onclick="addProduct()">Add Product</button>
+        </div>
+
+        <!-- Find Product -->
+        <div class="box">
+            <h2>Find Product</h2>
+
+            <input type="text" id="findTitle" placeholder="Enter Product Title">
+
+            <button onclick="findProduct()">Find Product</button>
+
+            <div id="findResult"></div>
+        </div>
+
+        <!-- Delete Product -->
+        <div class="box">
+            <h2>Delete Product</h2>
+
+            <input type="number" id="deleteId" placeholder="Enter Product ID">
+
+            <button onclick="deleteProduct()">Delete Product</button>
+        </div>
+
+    </div>
+
+    <h2 class="heading">Products</h2>
+
+    <div id="productContainer"></div>
+
+    <script src="./product script.js"></script>
+
+</body>
+</html>
