@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let set=new Set(['banana', 'orange', 'kivi', 'apple', 'mango']);
+
+        console.log(set);
+
+        console.log(set.add('strawberry'));
+
+        console.log(set.size);
+
+        for(const element of set){
+            document.write(`<div class="card" style="display:inline-block; width:200px; border-radius:5px;">
+                <img src="https://dummyimage.com/600x400/000/fff" alt="0" style="width:100%">
+
+                <div class="container">
+                    <h4>${element}</h4>
+                    <p>Architect & engeeneer</p>
+                    </div>
+                    </div>
+                
+                `)
+        }
+    </script>
+</body>
+</html>

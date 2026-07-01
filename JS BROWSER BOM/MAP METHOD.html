@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var mymap = new Map();
+      mymap.set("roll.no", 101);
+      mymap.set("sname", "mayara");
+      mymap.set(1, "eng");
+      mymap.set("contact", 9699456328);
+      console.log(
+        mymap.get("roll.no"),
+        mymap.get("sname"),
+        mymap.get(1),
+        mymap.get("contact"),
+      );
+      console.log(mymap.has("roll.no"));
+     // console.log(mymap.delete("roll.no"));
+     // console.log(mymap.clear())
+      console.log(mymap);
+      console.log(mymap.size)
+    </script>
+  </body>
+</html>

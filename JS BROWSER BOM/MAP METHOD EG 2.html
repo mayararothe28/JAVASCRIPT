@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let recipemap = new Map([
+        ['cucumber', 500],
+        ['tomato', 350],
+        ['onoin', 50]
+      ]);
+      console.log(recipemap.keys())
+
+      console.log(recipemap.values())
+
+      for(const element of recipemap.entries()){
+        console.log(element[0],element[1])
+      }
+
+
+      var students=[{"roll.no":101, "sname":"mayara", "contact": 96994563215},
+        {"roll.no":102, "sname": "siya", "contact":9452587859}
+    ]
+
+         var map =new Map(Object.entries(students));
+        console.log(map);
+        console.log(map.get("0"))
+      
+    </script>
+  </body>
+</html>
