@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>CLICK THE FIRST BUTTON HEELO</p>
+
+    <p>CLICK THE SECOND BUTTON EXECUTE</p>
+
+    <button onclick="myfunction()">try it</button>
+    <button onclick="mystopfunction()">try it</button>
+
+    <script>
+         var myvar;
+        function myfunction(){
+            myvar=setTimeout(function(){alert("hello")},1000);
+        }
+
+        function mystopfunction(){
+            clearTimeout(myvar);
+        }
+    </script>
+    
+</body>
+</html>

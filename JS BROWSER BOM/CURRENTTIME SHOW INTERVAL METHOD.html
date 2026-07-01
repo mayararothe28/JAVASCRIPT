@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>CURRENT TIME SHOW IN ONE SECOND</p>
+    <p id="demo"></p>
+    <button onclick="mystopfunction()">STOP TIME</button>
+    
+
+    <script>
+        var myvar=setInterval(mytimer, 1000);
+
+        function mytimer(){
+            var d=new Date();
+            var t= d.toLocaleTimeString();
+            document.getElementById("demo").innerHTML=t;
+        }
+
+        function mystopfunction(){
+            clearInterval(myvar);
+        }
+    </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #startcar{
+        position: relative;
+        font-size: 24px;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <p>click the button wait 3 sec</p>
+    <p>after clicking a way alert box</p>
+    <button onclick="myfunction()">TRY IT</button><br><br>
+    <span id="startcar"> CAR</span><br>
+    <button onclick="myfunction2()">RUN CAR</button>
+
+    <script>
+        function myfunction(){
+            setInterval(function(){alert("hello")}, 3000)
+            
+        }
+
+        function myfunction2(){
+            setInterval(runcar, 100);
+        }
+
+        function runcar(){
+            let car=document.getElementById("startcar");
+            car.style.left=(car.offsetLeft+10)+ "px"; 
+
+            if(car.offsetLeft>window.innerWidth){
+                car.style.left="0px";
+            }
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .productGallery {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin: 20px;
+      }
+      .product {
+        border: 1px solid #ccc;
+        padding: 5px;
+        width: 250px;
+        text-align: center;
+      }
+      .product img {
+        max-width: 100%;
+        height: auto;
+      }
+      .description {
+        margin-top: 10px;
+        font-weight: bold;
+      }
+      .cart {
+        border: 1px solid #000;
+        padding: 10px;
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 align="center">Products</h1>
+
+    <hr />
+    <div class="productGallery">
+      <div class="product">
+        <img
+          src="https://suprememobiles.in/cdn/shop/files/7_9653b5f3-4e40-4179-b928-af9534420098.webp?v=1769867213"
+        />
+        <div class="description">Apple iPhone 15 Price: ₹79999</div>
+        <button onclick="AddToCart('Apple iPhone 15', 79999)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <img
+          src="https://media-ik.croma.com/Croma%20Assets/Entertainment/Television/Images/323227_0_p9sDT9jUs.png?updatedAt=1778504836334"
+        />
+        <div class="description">Samsung Smart TV Price: ₹45999</div>
+        <button onclick="AddToCart('Samsung Smart TV', 45999)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9I7HI6dF9XlF7zzE2--baQTPZA9M6KdGcTcc7-58X5AN0T3UbQOUTPd0&s=10"
+        />
+        <div class="description">Boat Headphones Price: ₹2499</div>
+        <button onclick="AddToCart('Boat Headphones', 2499)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrNbn91U5O3DdDYxNTlqdC3iV8bWmxYY9aVhWdzczVjjvuhK2NzJMJQSeT&s=10"
+        />
+        <div class="description">HP Laptop Price: ₹58999</div>
+        <button onclick="AddToCart('HP Laptop', 58999)">Add to Cart</button>
+      </div>
+    </div>
+
+    <button onclick="sortByName()">Sort By Name</button>
+
+    <button onclick="sortByPrice()">Sort By Price</button>
+
+    <br />
+
+    <div class="cart" style="height: 25vh"></div>
+    <div class="total-box">Total :₹; <span id="total">0</span></div>
+
+    <script src="./cart.js"></script>
+  </body>
+</html>
